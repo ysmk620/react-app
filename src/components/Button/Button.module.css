@@ -1,0 +1,6 @@
+.button{
+    padding: 10px 20 px;
+    background-color: #f00;
+    color: white;
+}
+/* クラス名はキャメルケースで書く 理由：ハイフンを使うとJavaScriptのプロパティとして呼び出すときにエラーになるから*/
