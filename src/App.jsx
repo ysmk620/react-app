@@ -6,9 +6,7 @@ function App() {
     return (
         <>
             <h1>Hello World</h1>
-            <Button type='submit' disabled={false}>
-                ボタンクリック
-            </Button>
+            <Button type='submit' disabled={false}/>
         </>
     );
 }
