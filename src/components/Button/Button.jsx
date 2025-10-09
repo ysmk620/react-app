@@ -1,18 +1,17 @@
-import styles from './Button.module.css';
-import { useState } from 'react';
+import styles from "./Button.module.css";
 
 function Button(props) {
-    const [count, setCount] = useState(0); //countが状態を持つ変数。 setCountがcountを更新するための関数。
-    const { type, disabled } = props;
-
-    const handleClick = () => {
-        setCount(count + 1);
-    }
+    const { type, disabled, onClick, children } = props;
 
     return (
-        <button className={styles.button} type={type} disabled={disabled} onClick={handleClick}>
+        <button
+            className={styles.button}
+            type={type}
+            disabled={disabled}
+            onClick={onClick}
+        >
             {/* CSSモジュールのButton.module.cssで設定したクラス（.button）を読み込む。ReactではclassではなくclassName。{importした変数(styles).クラス名(button)} */}
-            カウント：{count}
+            {children}
         </button>
     );
 }
